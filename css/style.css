@@ -10,7 +10,6 @@
 }
 
 .slideshow ul {
-    /* 4 images donc 4 x 100% */
    width: auto;
    height: 200px;
    padding:0; margin:0;
