@@ -15,3 +15,13 @@
    padding:0; margin:0;
    list-style: none;
 }
+
+.slideshow-txt{
+   position:absolute;
+   width:100%;
+   color:#fff;
+   height:auto;
+   padding:0px;
+   background:#555;
+   opacity:0.8;
+}
