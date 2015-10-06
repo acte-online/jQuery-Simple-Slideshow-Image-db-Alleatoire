@@ -102,3 +102,6 @@ $(document).ready(function () {
   </body>
 </html>
 ```
+<br />
+
+Exemple : <a href="http://acte-online.com" target="_blank">http://acte-online.com</a>
