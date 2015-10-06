@@ -63,7 +63,7 @@ $(document).ready(function () {
 ```
 <br />
 
-<b>index.html</b>
+<b>index.html.twig</b>
 ```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
