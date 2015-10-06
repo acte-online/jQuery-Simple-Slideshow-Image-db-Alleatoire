@@ -11,24 +11,24 @@
         On boucle toutes les bannières de la DB.
         -->
         {% for banner in banners %}
-        <!-- 
-        On boucle tout les articles de la DB.
-        -->
-        {% for article in articles %}
-        <!-- 
-        Si le titre de l'article et identique au titre de la bannière on affiche.
-        -->
-        {% if article.articletitle==banner.articletitle %}
-        <li>
-        <div>
-        <div style="position:absolute;width:100%;color:#fff;height:auto;padding:0px;background:#555;opacity:0.8;">
-        <h4>{{ banner.title|capitalize }} <small style="color:#fff;"> - {{ article.pagetitle|capitalize }}</small></h4>
-        </div>
-        <img class="slideshow-img" src="{{ asset(['banner/', banner.path]|join) }}" alt="" width="100%" height="350" />
-        </div>
-        </li>
-        {% endif %}
-        {% endfor %}
+          <!-- 
+          On boucle tout les articles de la DB.
+          -->
+          {% for article in articles %}
+            <!-- 
+            Si le titre de l'article et identique au titre de la bannière on affiche.
+            -->
+            {% if article.articletitle==banner.articletitle %}
+              <li>
+                <div>
+                <div style="position:absolute;width:100%;color:#fff;height:auto;padding:0px;background:#555;opacity:0.8;">
+                  <h4>{{ banner.title|capitalize }} <small style="color:#fff;"> - {{ article.pagetitle|capitalize }}</small></h4>
+                </div>
+                <img class="slideshow-img" src="{{ asset(['banner/', banner.path]|join) }}" alt="" width="100%" height="350" />
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
         {% endfor %}
       </ul>
     </div>
