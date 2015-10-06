@@ -16,16 +16,16 @@ $(document).ready(function () {
   	    });  
   	  }, 3500);  
   	})(jQuery);
-  //-----------------------------------------------------------------------------------------
-  // SLIDESHOW BANNER IMAGES ALEATOIRE
-  //-----------------------------------------------------------------------------------------
-      var collection = $("ul.alleatoire li").get();
-      collection.sort(function() {
-          return Math.random()*10 > 5 ? 1 : -1;
-      });
-      $.each(collection,function(i,el) {
-          $(el).appendTo( $(el).parent() );
-      });
+    //-----------------------------------------------------------------------------------------
+    // SLIDESHOW BANNER :: IMAGES ALEATOIRE
+    //-----------------------------------------------------------------------------------------
+    var collection = $("ul.alleatoire li").get();
+    collection.sort(function() {
+        return Math.random()*10 > 5 ? 1 : -1;
+    });
+    $.each(collection,function(i,el) {
+        $(el).appendTo( $(el).parent() );
+    });
   });
 });
 ```
