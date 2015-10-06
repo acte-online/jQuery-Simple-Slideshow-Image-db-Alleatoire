@@ -61,3 +61,44 @@ $(document).ready(function () {
    opacity:0.8;
 }
 ```
+<br />
+
+<b>index.html</b>
+```html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+  <head>
+  <script type='text/javascript' src='js/jQuery-Slideshow.js'></script>
+  <link href="css/style.css" rel="stylesheet" media="all" type="text/css"> 
+  </head>
+  <body>
+    <div class="slideshow">
+      <ul class="alleatoire">
+        <!-- 
+        On boucle toutes les bannières de la DB.
+        -->
+        {% for banner in banners %}
+          <!-- 
+          On boucle tout les articles de la DB.
+          -->
+          {% for article in articles %}
+            <!-- 
+            Si le titre de l'article et identique au titre de la bannière on affiche.
+            -->
+            {% if article.articletitle==banner.articletitle %}
+              <li>
+                <div>
+                <div style="position:absolute;width:100%;color:#fff;height:auto;padding:0px;background:#555;opacity:0.8;">
+                  <h4>{{ banner.title|capitalize }} <small style="color:#fff;"> - {{ article.pagetitle|capitalize }}</small></h4>
+                </div>
+                <img class="slideshow-img" src="{{ asset(['banner/', banner.path]|join) }}" alt="" width="100%" height="350" />
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
+```
