@@ -29,3 +29,35 @@ $(document).ready(function () {
   });
 });
 ```
+<br />
+
+<b>style.css</b>
+```css
+.slideshow {
+   width: 100%;
+   height: 350px;
+   overflow: hidden;
+   border: 2px solid #555;
+   background:#fff;
+   text-align:center;
+   margin:auto auto auto auto;
+   overflow:hidden;
+}
+
+.slideshow ul {
+   width: auto;
+   height: 200px;
+   padding:0; margin:0;
+   list-style: none;
+}
+
+.slideshow-txt{
+   position:absolute;
+   width:100%;
+   color:#fff;
+   height:auto;
+   padding:0px;
+   background:#555;
+   opacity:0.8;
+}
+```
